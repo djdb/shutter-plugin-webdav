@@ -1,8 +1,8 @@
 # shutter-plugin-webdav
 
-[Shutter](http://shutter-project.org/) upload plugin based on [WebDAV](http://en.wikipedia.org/wiki/WebDAV). Allows you to push images on WebDAV-enabled server from shutter in two clicks.
+[Shutter](http://shutter-project.org/) upload plugin based on [WebDAV](http://en.wikipedia.org/wiki/WebDAV). Allows you to push images on WebDAV-enabled server from Shutter in two clicks.
 
-## Requirements (shutter side)
+## Requirements (Shutter side)
 
 perl [HTTP::DAV](http://search.cpan.org/~pcollins/HTTP-DAV-0.31/DAV.pm) module
 
@@ -30,7 +30,7 @@ a2enmod dav
 a2enmod dav_fs
 ~~~
 
-* Configured WebDAV location. Example:
+* Configured WebDAV location
 
 ~~~
 <Location /i>
@@ -49,10 +49,18 @@ a2enmod dav_fs
 </Location>
 ~~~
 
+and image directory:
+
+~~~
+mkdir -p /var/www/i
+chown www-data /var/www/i
+~~~
+
 ## Installation
 
 * Fetch WebDAV.pm to Shutter's upload_plugins/upload directory
 * Adjust variables inside WebDAV.pm file (marked with # edit)
+* Restart Shutter
 
 ~~~
 git clone https://github.com/djdb/shutter-plugin-webdav
