@@ -5,6 +5,7 @@
 ## Requirements (Shutter side)
 
 perl [HTTP::DAV](http://search.cpan.org/~pcollins/HTTP-DAV-0.31/DAV.pm) module
+
 perl [Crypt::SSLeay](http://search.cpan.org/~nanis/Crypt-SSLeay/SSLeay.pm) module (for HTPPS uploads support)
 
 ### via apt (Ubuntu / Debian)
