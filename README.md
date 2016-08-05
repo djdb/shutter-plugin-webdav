@@ -1,15 +1,17 @@
 # shutter-plugin-webdav
 
-[Shutter](http://shutter-project.org/) upload plugin based on [WebDAV](http://en.wikipedia.org/wiki/WebDAV). Allows you to push images on WebDAV-enabled server from Shutter in two clicks.
+[Shutter](http://shutter-project.org/) upload plugin based on [WebDAV](http://en.wikipedia.org/wiki/WebDAV). Allows you to push images on WebDAV-enabled server from Shutter in two clicks. Remote HTTP and HTTPS support.
 
 ## Requirements (Shutter side)
 
 perl [HTTP::DAV](http://search.cpan.org/~pcollins/HTTP-DAV-0.31/DAV.pm) module
+perl [Crypt::SSLeay](http://search.cpan.org/~nanis/Crypt-SSLeay/SSLeay.pm) module (for HTPPS uploads support)
 
 ### via apt (Ubuntu / Debian)
 
 ~~~
 apt-get install libhttp-dav-perl
+apt-get install libcrypt-ssleay-perl # for HTTPS uploads support
 ~~~
 
 ### via perl CPAN
@@ -17,6 +19,12 @@ apt-get install libhttp-dav-perl
 ~~~
 cpan
 cpan> install HTTP::DAV
+~~~
+
+for HTTPS uploads support:
+
+~~~
+cpan> install Crypt::SSLeay
 ~~~
 
 ## Requirements (server side)
